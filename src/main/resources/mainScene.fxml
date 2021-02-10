@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="firstForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="379.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.myhome.LuxGroup.Controller">
+   <children>
+      <VBox fillWidth="false" prefHeight="230.0" prefWidth="179.0">
+         <children>
+            <Label text="Материал">
+               <font>
+                  <Font name="Roboto" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" layoutX="20.0" layoutY="112.0" prefHeight="26.0" prefWidth="180.0" spacing="5.0">
+               <children>
+                  <ComboBox fx:id="cbMList" accessibleRole="CONTEXT_MENU" editable="true" minHeight="20.0" onAction="#onMListAction" onKeyReleased="#onMListKeyReleased" prefHeight="21.0" prefWidth="137.0" visibleRowCount="7" />
+                  <TextField fx:id="tfThickness" layoutX="47.0" layoutY="10.0" minHeight="-Infinity" onKeyTyped="#onTFSquareChange" prefHeight="21.0" prefWidth="45.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <CheckBox fx:id="checkBoxM" mnemonicParsing="false" onAction="#onCheckBoxAction" text="материал заказчика">
+               <font>
+                   <Font name="Roboto" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="7.0" />
+               </VBox.margin>
+            </CheckBox>
+            <Label text="Квадратура">
+               <font>
+                  <Font name="Roboto" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <HBox fx:id="sqContainer" alignment="CENTER" prefHeight="26.0" prefWidth="180.0" spacing="3.0">
+               <children>
+                  <TextField fx:id="tfWidth" minHeight="-Infinity" minWidth="50.0" onKeyTyped="#onTFWidthChange" prefHeight="21.0" prefWidth="50.0" promptText="Д.">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="x" />
+                  <TextField fx:id="tfHeight" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="50.0" onKeyTyped="#onTFHeightChange" prefHeight="21.0" prefWidth="50.0" promptText="Ш.">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+                  <Label layoutX="57.0" layoutY="10.0" prefHeight="17.0" prefWidth="13.0" text="=">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfSquare" layoutX="47.0" layoutY="10.0" minHeight="-Infinity" onKeyTyped="#onTFSquareChange" prefHeight="21.0" prefWidth="80.0" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </HBox>
+            <Label text="Длина реза">
+               <font>
+                  <Font name="Roboto" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfLength" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="180.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="Стоимость">
+               <font>
+                  <Font name="Roboto" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfRerult" editable="false" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="180.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="10.0" left="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <Button fx:id="btExit" layoutX="314.0" layoutY="187.0" mnemonicParsing="false" onAction="#btExitOnAction" prefHeight="18.0" prefWidth="41.0" text="Exit" />
+      <Button fx:id="calcButton" layoutX="218.0" layoutY="187.0" mnemonicParsing="false" onAction="#onCalcButtonAction" text="Вычислить" />
+      <TextArea fx:id="tAreaInform" editable="false" layoutX="207.0" layoutY="10.0" prefHeight="177.0" prefWidth="180.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets left="5.0" />
+   </padding>
+</AnchorPane>
