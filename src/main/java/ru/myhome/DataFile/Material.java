@@ -3,6 +3,7 @@ package ru.myhome.DataFile;
 public class Material {
 	
 	private String type;
+	private int i;
 	private double thickness;
 	
 	public Material() {
